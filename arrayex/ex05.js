@@ -1,5 +1,5 @@
-//Dado o array let frutas = ['maçã', 'banana'] e o array let maisFrutas = ['laranja', 'pera'], use o método concat() para combinar os dois arrays em um novo array e exiba o resultado.
-let frutas=['maçã','banana'];
-let maisFrutas =['laranja','pera'];
-const todasFrutas = frutas.concat(maisFrutas)
-console.log(todasFrutas)
+//Crie um array com os elementos [10, 20, 30]. Use o método push() para adicionar os elementos 40 e 50 ao final do array. Exiba o array resultante
+
+const numeros =[10,20,30];
+numeros.push(40,50)
+console.log(numeros)
