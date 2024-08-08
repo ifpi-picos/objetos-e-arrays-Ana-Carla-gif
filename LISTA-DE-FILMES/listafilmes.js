@@ -63,6 +63,8 @@ function exibirMenu() {
 
 function executarPrograma() {
     let opcao;
+    
+    
 do
      {
         exibirMenu();
