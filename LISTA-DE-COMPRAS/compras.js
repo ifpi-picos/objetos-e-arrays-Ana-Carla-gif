@@ -2,7 +2,7 @@ let ListaCompra =[];
 function AdicionarItem(){
   const item =prompt("Digite o item:");
   ListaCompra.push(item);
-  console.log(`${item} adicionar item a lista`)
+  console.log(`${item} adicionado a lista`)
 }
 function RemoverItem(){
   const item = prompt("Digite o item que você deseja retirar:");
@@ -28,9 +28,11 @@ function PesquisarItem(){
   } 
   }
 
-function OrdenarLista(){
+
+
+function OrdenarLista(){ 
   ListaCompra.sort();
-  console.log|("A lista está ordenada em ordem alfabética!");
+  console.log("A lista está ordenada em ordem alfabética!");
 }
 function ExibirLista(){
   if(ListaCompra.length === 0){
