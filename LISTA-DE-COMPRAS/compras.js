@@ -68,25 +68,26 @@ while (true){
     case 1 :
       AdicionarItem();
       break;
-      case 2 :
-        RemoverItem();
-        break;
+    case 2 :
+      RemoverItem();
+      break;
     case 3 :
       PesquisarItem();
       break;
-      case 4:
-        OrdenarLista();
-        break;
-        case 5 :
-          ExibirLista();
-          break;
-          case 6 :
-            LimparLista();
-            case 0:
-              console.log("Encerramento do programa...");
-            process.exit();
-            default:
-              console.log("Opção inválida!")
+    case 4:
+      OrdenarLista();
+      break;
+    case 5 :
+      ExibirLista();
+      break;
+    case 6 :
+      LimparLista();
+      break
+    case 0:
+      console.log("Encerramento do programa...");
+      process.exit();
+    default:
+      console.log("Opção inválida!")
   }
 }
 
