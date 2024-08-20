@@ -6,7 +6,7 @@ const filmesAssistidos = [];
 
 
 function adicionarFilme(titulo, ano) {
-    filmesParaAssistir.push({ titulo, ano });
+    filmesParaAssistir.push({ titulo:titulo, ano:ano });
 }
 
 function ordenarListaPorTitulo() {
@@ -22,6 +22,7 @@ function pesquisarFilme(titulo) {
 }
 
 function exibirListas() {
+
     console.log("Filmes para Assistir:");
     filmesParaAssistir.forEach(filme => console.log(`Título: ${filme.titulo}, Ano: ${filme.ano}`));
     
@@ -62,54 +63,54 @@ function exibirMenu() {
 }
 
 function executarPrograma() {
-    let opcao;
-    
-    
-do
-     {
+ 
+    let i = true
+    while(i == true){
         exibirMenu();
         let opcao = Number(prompt('Escolha uma opção: '));
-       
-        switch (opcao) {
-            case 1:
-                const titulo = prompt('Digite o título do filme: ');
-                const ano = parseInt(prompt('Digite o ano de lançamento do filme: '), 10);
-                adicionarFilme(titulo, ano);
-                console.log('Filme adicionado.');
-                break;
-            case 2:
-                ordenarListaPorTitulo();
-                console.log('Lista ordenada por título.');
-                break;
-            case 3:
-                ordenarListaPorAno();
-                console.log('Lista ordenada por ano.');
-                break;
-            case 4:
-                const pesquisarTitulo = prompt('Digite o título do filme para pesquisar: ');
-                console.log(pesquisarFilme(pesquisarTitulo) ? 'Filme encontrado.' : 'Filme não encontrado.');
-                break;
-            case 5:
-                exibirListas();
-                break;
-            case 6:
-                marcarFilmeComoAssistido();
-                break;
-            case 7:
-                const removerTitulo = prompt('Digite o título do filme para remover: ');
-                removerFilme(removerTitulo);
-                break;
-            case 8:
-                console.log('Programa encerrado.');
-                break;
-            default:
+    
+    switch (opcao) {
+        case 1:
+            const titulo = prompt('Digite o título do filme: ').trim();
+            const ano = parseInt(prompt('Digite o ano de lançamento do filme: '));
+            adicionarFilme(titulo, ano);
+            console.log('Filme adicionado.');
+            break;
+        case 2:
+            ordenarListaPorTitulo();
+            console.log('Lista ordenada por título.');
+            break;
+        case 3:
+            ordenarListaPorAno();
+            console.log('Lista ordenada por ano.');
+            break;
+        case 4:
+            const pesquisarTitulo = prompt('Digite o título do filme para pesquisar: ');
+            console.log(pesquisarFilme(pesquisarTitulo) ? 'Filme encontrado.' : 'Filme não encontrado.');
+            break;
+        case 5:
+            exibirListas();
+            break;
+        case 6:
+            marcarFilmeComoAssistido();
+            break;
+        case 7:
+            const removerTitulo = prompt('Digite o título do filme para remover: ').trim();
+            removerFilme(removerTitulo);
+            break;
+        case 8:
+            console.log('Programa encerrado.');
+            i = false
+            break;
+        default:
 
-                console.log('Opção inválida, tente novamente.');
-                break;
+            console.log('Opção inválida, tente novamente.');
+            break;
 
-        }
-    } while (opcao == 8);
+    }
 }
+}
+    
 
 executarPrograma();
 
